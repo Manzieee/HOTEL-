@@ -1,0 +1,74 @@
+
+ <!DOCTYPE html>
+
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title> Admin and User Page </title>
+ 
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/hotel logo.jpg"  style="width:300px;height:300px;" ></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about us.html">ABOUT US</a></li>
+                    <li><a href="rooms.php">ROOM & SUITES</a></li>
+                    <li><a href="dinner.html">DINNER</a></li>
+                    <li><a href="facilities.html">FACILIIES</a></li>
+                    <?PHP if(empty($_SESSION["Username"])){  ?>
+                        <li><a class="dropdown-item"  href="login chosee.html">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Login 
+                        </a></li>
+                        
+                        <?PHP } else {?>
+                        <li><a class="dropdown-item" href="logout.php">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a></li>
+                        <?PHP  }?>
+                    <li><a href="sign up chosee.html">SIGN UP</a></li>
+                    <li><a href="contact us.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+   
+
+   <div class="text-box">
+    <h1>
+        Sri Manja Boutique hotel
+    </h1>
+    <h2>SIGN UP</h2>
+    <p></p>
+    <a href="admin sign up.html" class="more">ADMIN</a>
+    <a href="signupform.html" class="more">USER</a>
+    
+</div>
+
+
+   </section>
+
+   <style>
+   .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/yoyoyo.jpg);
+    background-color:grey; 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+   </style>
+   </body>
+   </html>
+
+
+
+
+
